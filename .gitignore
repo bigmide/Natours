@@ -1,0 +1,10 @@
+
+.env*
+*.env
+.flaskenv*
+!.env.project
+!.env.vault
+node_modules
+node_modules
+.parcel-cache
+.DS_Store
