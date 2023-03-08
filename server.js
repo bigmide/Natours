@@ -28,9 +28,7 @@ mongoose.set('strictQuery', false);
 
 const port = process.env.PORT;
 
-const server = app.listen(port, '127.0.0.1', () =>
-  console.log('Listening at ... http://127.0.0.1:3000')
-);
+const server = app.listen(port, () => console.log('Listening...'));
 
 process.on('unhandledRejection', (err) => {
   console.error(`💥 Error Name: ${err.name}`);
