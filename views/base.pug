@@ -6,10 +6,12 @@ html(lang="en")
       meta(http-equiv="X-UA-Compatible", content="IE=edge")
       meta(name="viewport", content="width=device-width, initial-scale=1.0")
       link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato:300,300i,700")
-      link(rel="stylesheet", href="/css/style.css")
       link(rel="shortcut icon", href="/img/favicon.png", type="image/png")
-      script(defer src='/js/bundled/index.js')
+      script(src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js')
+      link(href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet')
       script(src='https://js.stripe.com/v3/')
+      link(rel="stylesheet", href="/css/style.css")
+      script(defer src='/js/bundled/index.js')
       title Natours | #{title}
 
   body 
