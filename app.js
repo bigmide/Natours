@@ -17,6 +17,7 @@ const viewRouter = require('./routes/viewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controller/errorController');
+const bookingController = require('./controller/bookingController');
 
 const app = express();
 
@@ -44,6 +45,12 @@ const limiter = rateLimit({
   message: 'Too many request from this IP. Please try again in an hour',
 });
 app.use('/api', limiter);
+
+app.post(
+  '/webhook-checkout',
+  express.raw({ type: 'application/json' }),
+  bookingController.webhookCheckout
+);
 
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
