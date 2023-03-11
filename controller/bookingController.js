@@ -5,7 +5,7 @@ const Booking = require('../models/bookingModel');
 const catchAsync = require('../utils/catchAsync');
 // const AppError = require('../utils/appError');
 const factory = require('./handlerFactory');
-const { async } = require('regenerator-runtime');
+// const { async } = require('regenerator-runtime');
 
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   // Get the currently booked tour
@@ -73,7 +73,7 @@ exports.webhookCheckout = catchAsync(async (req, res) => {
     case 'checkout.session.completed':
       const checkoutSessionCompleted = event.data.object;
       // Then define and call a function to handle the event checkout.session.completed
-      createBookingCheckout(checkoutSessionCompleted);
+      await createBookingCheckout(checkoutSessionCompleted);
       break;
     // ... handle other event types
     default:
