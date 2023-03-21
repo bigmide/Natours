@@ -2,6 +2,8 @@
 
 An API rendered website built using modern technologies: node.js, express, mongoDB, mongoose.
 
+Hosted on: https://natours-api-3tvo.onrender.com
+
 ## Features
 
 - Sign Up
@@ -42,5 +44,3 @@ An API rendered website built using modern technologies: node.js, express, mongo
 ### DELETE
 
 - Delete Your account: `https://natours-api-3tvo.onrender.com/api/v1/users/delete-me`
-
-Hosted on: https://natours-api-3tvo.onrender.com
